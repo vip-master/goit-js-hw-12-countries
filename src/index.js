@@ -40,7 +40,7 @@ const find = debounce(() => {
     clear()
     if (input.value) {
         fetch(`https://restcountries.eu/rest/v2/name/${input.value}`)
-            .then(res => res.statusText === "OK" ? res.json() : openAlert({
+            .then(res => (+res.status) / 100 === 2 ? res.json() : openAlert({
                 title: `Error ${res.status}`,
                 text: res.statusText
             }))

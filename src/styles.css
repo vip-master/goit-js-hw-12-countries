@@ -20,6 +20,8 @@ input {
     border-radius: 5px;
     transition-property: width;
     transition-duration: 0.25s;
+    outline: none;
+    outline-color: transparent;
 }
 
 input.alert {
